@@ -261,7 +261,7 @@ namespace TRAEProject.Changes.NPCs
         public override void EditSpawnPool(IDictionary<int, float> pool, NPCSpawnInfo spawnInfo)
         {
      
-            if (Main.remixWorld && spawnInfo.Player.ZoneUnderworldHeight && spawnInfo.PlayerFloorX > Main.maxTilesX / 3 && spawnInfo.PlayerFloorX < Main.maxTilesX * 2 / 3)
+            if (Main.remixWorld && spawnInfo.Player.ZoneUnderworldHeight && (Main.maxTilesX*0.39+50 || Main.maxTilesX*0.61))
             {
 
                 int[] removeThese = { NPCType<OniRoninNPC>(), NPCType<SalalavaNPC>(), NPCType<ObsidianBasiliskHead>(), NPCType<PhoenixNPC>(), NPCType<LavamanderNPC>(), NPCType<Lavalarva>(), NPCType<Froggabomba>(), NPCType<Boomxie>() };
